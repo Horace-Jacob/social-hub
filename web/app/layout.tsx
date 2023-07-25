@@ -7,7 +7,7 @@ import Logo from "@/public/elephant.png";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Social Media",
+  title: "Social Hub",
   description: "Lwin Oo Naing => lwinoonaing806@gmail.com",
 };
 
