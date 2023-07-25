@@ -31,15 +31,12 @@ export async function fetchCommentsByPost(postId: number) {
 }
 
 export async function fetchSearchQuery(query: string) {
-  const response = await fetch(
-    `${baseURL}/search/searchall/${query}`,
-    {
-      cache: "no-store",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
+  const response = await fetch(`${baseURL}/search/searchall/${query}`, {
+    cache: "no-store",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
   const data: Search = await response.json();
   return data;
 }

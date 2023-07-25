@@ -17,3 +17,14 @@ export const AppDataSource = new DataSource({
   logging: true,
   synchronize: true,
 });
+
+// export const AppDataSource = new DataSource({
+//   type: "postgres",
+//   port: 5432,
+//   username: "postgres",
+//   password: "awesomepassword123",
+//   database: "social_media_clone",
+//   entities: [Users, Post, Comment, Vote, Follow],
+//   logging: true,
+//   synchronize: true,
+// });
