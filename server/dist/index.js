@@ -59,7 +59,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     app.use(body_parser_1.default.urlencoded({ limit: "30mb", extended: true }));
     app.set("trust proxy", 1);
     app.use((0, cors_1.default)({
-        origin: "http://localhost:3000",
+        origin: "https://social-hub-two.vercel.app",
         credentials: true,
     }));
     app.use("/user", UserRoutes_1.default);
