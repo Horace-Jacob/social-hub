@@ -4,6 +4,5 @@
   "framework": "nextjs",
   "installCommand": "npm install",
   "outputDirectory": "build",
-  "public": true,
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "public": true
 }
