@@ -29,7 +29,7 @@ const main = async () => {
   app.set("trust proxy", 1);
   app.use(
     cors({
-      origin: "http://localhost:3000",
+      origin: "https://social-hub-two.vercel.app",
       credentials: true,
     })
   );
@@ -38,7 +38,7 @@ const main = async () => {
   app.use("/post", PostRoutes);
   app.use("/comment", CommentRoutes);
   app.use("/follow", FollowRoutes);
-  app.use("/search", SearchRoutes)
+  app.use("/search", SearchRoutes);
 
   app.listen(PORT, () => {
     console.log(`Server has started running on PORT ${PORT}`);
