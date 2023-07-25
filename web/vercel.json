@@ -1,1 +1,9 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "cleanUrls": true,
+  "devCommand": "next build",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "outputDirectory": "build",
+  "public": true,
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
