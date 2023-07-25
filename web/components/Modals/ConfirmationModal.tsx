@@ -12,6 +12,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import React from "react";
 import ReactDOM from "react-dom";
+import Image from "next/image";
 
 interface Props {
   onClose: () => void;
@@ -115,10 +116,13 @@ const ConfirmationModal: React.FC<Props> = ({
                   {followingData ? (
                     <>
                       <div>
-                        <img
+                        <Image
                           className="h-24 w-24 rounded-full cursor-pointer bg-slate-500"
                           src={followingData.creator.photo}
                           alt="Profile Pic"
+                          priority
+                          width={12}
+                          height={12}
                         />
                       </div>
                       <div className="mt-2">

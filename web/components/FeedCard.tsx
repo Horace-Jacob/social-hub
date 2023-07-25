@@ -114,10 +114,13 @@ const FeedCard: React.FC<FeedCardProps> = ({
         <div className="w-full  rounded-lg bg-slate-100 ">
           <div className="flex justify-between p-3">
             <div className="flex justify-center items-center">
-              <img
+              <Image
                 className="h-12 w-12 rounded-full cursor-pointer"
                 src={data.creator.photo}
                 alt="Profile Pic"
+                width={12}
+                height={12}
+                priority
               />
               <div className="flex flex-col mx-2">
                 <Link href={`/profile/${data.creator.id}`}>

@@ -50,10 +50,13 @@ const Following = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <Link href={`/profile/${value.creator.id}`}>
-                  <img
+                  <Image
                     className="h-12 w-12 rounded-full cursor-pointer"
                     src={value.creator.photo}
                     alt="Profile Pic"
+                    width={12}
+                    height={12}
+                    priority
                   />
                 </Link>
 

@@ -20,6 +20,7 @@ import {
 } from "@/utils/constants";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import jwt_decode from "jwt-decode";
+import Image from "next/image";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -146,18 +147,19 @@ const SearchCom: React.FC<Props> = ({ query }) => {
                             {post.post_creator === null ? (
                               <div className="flex items-center justify-between p-3 bg-slate-100 rounded-lg mb-3">
                                 <div className="flex items-center">
-                                  <Link href={`/profile/${post.entity_photo}`}>
-                                    <img
+                                  <Link href={`/profile/${post.entity_id}`}>
+                                    <Image
                                       className="h-12 w-12 rounded-full cursor-pointer"
                                       src={post.entity_photo}
                                       alt="Profile Pic"
+                                      width={12}
+                                      height={12}
+                                      priority
                                     />
                                   </Link>
 
                                   <div className="flex flex-col mx-2">
-                                    <Link
-                                      href={`/profile/${post.entity_photo}`}
-                                    >
+                                    <Link href={`/profile/${post.entity_id}`}>
                                       <span className="font-semibold text-lg hover:underline cursor-pointer">
                                         {post.entity_text}
                                       </span>
@@ -206,9 +208,12 @@ const SearchCom: React.FC<Props> = ({ query }) => {
                                         <Link
                                           href={`/profile/${post.creator_id}`}
                                         >
-                                          <img
+                                          <Image
                                             className="h-12 w-12 rounded-full cursor-pointer"
                                             src={post.creator_photo}
+                                            width={12}
+                                            height={12}
+                                            priority
                                             alt="Profile Pic"
                                           />
                                         </Link>

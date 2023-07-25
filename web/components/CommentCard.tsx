@@ -18,9 +18,12 @@ const CommentCard: React.FC<Props> = ({
   return (
     <div className="flex justify-between p-3">
       <div className="flex justify-center ">
-        <img
+        <Image
           className="h-9 w-9 rounded-full cursor-pointer"
           src={profilePic}
+          priority
+          width={12}
+          height={12}
           alt="Profile Pic"
         />
         <div className="flex flex-col ml-2 bg-slate-100 rounded-lg p-3">

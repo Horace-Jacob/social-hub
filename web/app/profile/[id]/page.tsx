@@ -40,6 +40,7 @@ async function GetUserPosts(id: number) {
 function UserProfile({ params }: any) {
   const [userId, setUserId] = React.useState<number>(0);
   const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
+
   const queryClient = useQueryClient();
   const getUserPostsQuery = useQuery([GetUserPostById], () =>
     GetUserPosts(params.id)
@@ -96,10 +97,14 @@ function UserProfile({ params }: any) {
             <div className="flex items-center px-6 justify-between bg-slate-100 max-sm:flex-col">
               <div className="flex items-center max-sm:flex-col">
                 <div className="mt-[-50px] border-4 border-slate-100 rounded-full">
-                  <img
+                  <Image
                     className="h-48 w-48 rounded-full bg-black"
                     src={data.results.photo}
                     alt="Profile Pic"
+                    width={12}
+                    priority
+                    height={12}
+                    quality={75}
                   />
                 </div>
                 <div className="flex flex-col mx-6 max-sm:items-center">

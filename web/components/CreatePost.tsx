@@ -43,26 +43,31 @@ const CreatePost = () => {
 
   return (
     <>
-      <div className="p-3 flex items-center w-full  rounded-lg bg-slate-100 mb-3">
-        <Link href={`/profile/${profileData?.results.id}`}>
-          <img
-            className="h-12 w-12 rounded-full cursor-pointer"
-            src={profileData?.results.photo}
-            alt="Profile Pic"
-          />
-        </Link>
-        <div
-          className="w-full bg-slate-200 flex items-center m-1 rounded-lg mx-2 cursor-pointer"
-          onClick={openModal}
-        >
-          <div className="m-2">
-            <MdOutlineCreate size={22} />
-          </div>
-          <div className="py-3 text-base text-slate-600">
-            What&apos;s on your mind?
+      {profileData !== undefined ? (
+        <div className="p-3 flex items-center w-full  rounded-lg bg-slate-100 mb-3">
+          <Link href={`/profile/${profileData?.results.id}`}>
+            <Image
+              className="h-12 w-12 rounded-full cursor-pointer"
+              src={profileData.results.photo}
+              height={12}
+              width={12}
+              alt="Profile Pic"
+            />
+          </Link>
+          <div
+            className="w-full bg-slate-200 flex items-center m-1 rounded-lg mx-2 cursor-pointer"
+            onClick={openModal}
+          >
+            <div className="m-2">
+              <MdOutlineCreate size={22} />
+            </div>
+            <div className="py-3 text-base text-slate-600">
+              What&apos;s on your mind?
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
+
       {isModalOpen && <Modal onClose={closeModal} />}
     </>
   );
