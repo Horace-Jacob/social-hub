@@ -13,6 +13,7 @@ const nextConfig = {
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  distDir: "build",
 };
 
 module.exports = nextConfig;
