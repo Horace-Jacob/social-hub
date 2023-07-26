@@ -163,17 +163,17 @@ const CommentModal: React.FC<DynamicModalProps> = ({
                 ) : null}
               </div>
 
-              <div className="mt-auto">
+              <div className="mt-auto ">
                 <label htmlFor="chat" className="sr-only">
                   Your message
                 </label>
-                <div className="flex items-center px-3 py-2 rounded-lg border-none">
+                <div className="flex items-center px-3 py-2 rounded-lg border-none bg-slate-200">
                   <textarea
                     id="chat"
                     rows={1}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                    className="block mx-4 p-2.5 resize-y w-full text-sm text-gray-900 bg-white rounded-lg focus:outline-none"
+                    className="block mx-4 p-2.5 resize-y w-full text-sm rounded-md text-gray-900rounded-lg focus:outline-none"
                     placeholder="Your message..."
                   ></textarea>
                   <button
