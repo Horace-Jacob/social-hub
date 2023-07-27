@@ -205,18 +205,14 @@ const SearchCom: React.FC<Props> = ({ query }) => {
                                   <div className="flex justify-between p-3">
                                     <div className="flex items-center justify-between">
                                       <div className="flex items-center">
-                                        <Link
-                                          href={`/profile/${post.creator_id}`}
-                                        >
-                                          <Image
-                                            className="h-12 w-12 rounded-full cursor-pointer"
-                                            src={post.creator_photo}
-                                            width={12}
-                                            height={12}
-                                            priority
-                                            alt="Profile Pic"
-                                          />
-                                        </Link>
+                                        <Image
+                                          className="h-10 w-10 rounded-full cursor-pointer"
+                                          src={post.creator_photo}
+                                          width={12}
+                                          height={12}
+                                          priority
+                                          alt="Profile Pic"
+                                        />
 
                                         <div className="flex flex-col mx-2">
                                           <Link

@@ -149,7 +149,7 @@ const MainNav = () => {
                       <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none ">
                         <span className="sr-only">Open user menu</span>
                         <Image
-                          className="h-8 w-8 rounded-full bg-white"
+                          className="h-10 w-10 rounded-full bg-white"
                           src={
                             profileData?.results !== undefined
                               ? profileData.results.photo

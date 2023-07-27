@@ -45,15 +45,13 @@ const CreatePost = () => {
     <>
       {profileData !== undefined ? (
         <div className="p-3 flex items-center w-full  rounded-lg bg-slate-100 mb-3">
-          <Link href={`/profile/${profileData?.results.id}`}>
-            <Image
-              className="h-12 w-12 rounded-full cursor-pointer"
-              src={profileData.results.photo}
-              height={12}
-              width={12}
-              alt="Profile Pic"
-            />
-          </Link>
+          <Image
+            className="h-10 w-10 rounded-full cursor-pointer"
+            src={profileData.results.photo}
+            height={12}
+            width={12}
+            alt="Profile Pic"
+          />
           <div
             className="w-full bg-slate-200 flex items-center m-1 rounded-lg mx-2 cursor-pointer"
             onClick={openModal}

@@ -115,7 +115,7 @@ const FeedCard: React.FC<FeedCardProps> = ({
           <div className="flex justify-between p-3">
             <div className="flex justify-center items-center">
               <Image
-                className="h-12 w-12 rounded-full cursor-pointer"
+                className="h-10 w-10 rounded-full cursor-pointer"
                 src={data.creator.photo}
                 alt="Profile Pic"
                 width={12}

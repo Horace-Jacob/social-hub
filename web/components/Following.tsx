@@ -49,16 +49,14 @@ const Following = () => {
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <Link href={`/profile/${value.creator.id}`}>
-                  <Image
-                    className="h-12 w-12 rounded-full cursor-pointer"
-                    src={value.creator.photo}
-                    alt="Profile Pic"
-                    width={12}
-                    height={12}
-                    priority
-                  />
-                </Link>
+                <Image
+                  className="h-10 w-10 rounded-full cursor-pointer"
+                  src={value.creator.photo}
+                  alt="Profile Pic"
+                  width={12}
+                  height={12}
+                  priority
+                />
 
                 <div className="flex flex-col mx-2">
                   <Link href={`/profile/${value.creator.id}`}>
